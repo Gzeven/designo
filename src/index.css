@@ -1,13 +1,174 @@
-body {
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary colors*/
+  --peach: hsl(11, 73%, 66%);
+  --black: hsl(270, 3%, 11%);
+  --white: hsl(0, 100%, 100%);
+  /* secondary colors */
+  --light-peach: hsl(11, 100%, 80%);
+  --dark-grey: hsl(264, 5%, 20%);
+  --light-grey: hsl(210, 17%, 95%);
+
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 15px;
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --font-size: 16px;
+}
+/*
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Jost", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.125;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.28;
+  letter-spacing: 1.4px;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+p {
+  font-size: 0.938rem;
+}
+
+.btn-dark {
+  width: 9.5rem;
+  display: block;
+  text-transform: uppercase;
+  background: var(--white);
+  color: var(--dark-grey);
+  padding: 20.5px 0;
+  margin: 0 auto;
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  border-color: transparent;
+  line-height: 0.9375;
+  letter-spacing: 1px;
+}
+.btn-dark:hover {
+  color: var(--white);
+  background: var(--light-peach);
+}
+
+.btn-light {
+  width: 9.5rem;
+  display: block;
+  text-transform: uppercase;
+  background: var(--peach);
+  color: var(--white);
+  padding: 16px 0;
+  margin: 0 auto;
+  display: inline-block;
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  border-color: transparent;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+.btn-light:hover {
+  background: var(--light-peach);
+}
+
+.section-center-two {
+  width: 87.2vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* .fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+} */
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.125;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  .section-center-one {
+    width: 89.714vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    border-radius: var(--radius);
+  }
+
+  .section-center-two {
+    width: 89.714vw;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .section-center-one,
+  .section-center-two {
+    width: 77.153vw;
+  }
 }
