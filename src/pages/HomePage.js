@@ -11,7 +11,6 @@ const HomePage = () => {
         
         <Wrapper >
         <div className="intro section-center-one">
-        <div className="phone-image"></div>
          <div className="intro-text" >
          <h1>Award-winning custom<br></br> designs and digital<br></br> branding solutions</h1>
          <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
@@ -46,7 +45,8 @@ const Wrapper = styled.main`
 }
 
 .leaf-container {
-  position: relative
+  position: relative;
+  
 }
 
   .intro {
@@ -56,7 +56,9 @@ const Wrapper = styled.main`
       background-repeat: no-repeat;
       background-size: fill; 
       background-position: calc(50% + 260px/2) calc(50% - 5px/2);
-      overflow: hidden;   
+      overflow: hidden; 
+     
+     
        h1, p {
     color: var(--white);
     }  
@@ -65,21 +67,16 @@ const Wrapper = styled.main`
       font-size: 0.975rem;
       line-height: 1.66;  
   } 
-
-  .phone-image {
-       position: absolute;
-       width: 100%;
-       height: 100%;
-       background-image: url(${Phone});
-       background-position: calc(50% + 0px/2) calc(50% + 680px/2);
-       background-repeat: no-repeat;
-       
-     }
+ 
   .intro-text {
-    height: 48rem;
-    z-index: 10;
+    height: 52.688rem;
+    width:100%;
+     background-image: url(${Phone});
+     background-position: calc(50% + 0px/2) calc(50% + 675px/2);
+     background-repeat: no-repeat;
+    
       h1 {
-      margin: 5rem 0 1.5rem; 
+      padding: 5rem 0 1.5rem; 
        }
    } 
   } 
@@ -113,14 +110,16 @@ const Wrapper = styled.main`
 
 @media (min-width: 768px) {
    .intro {
-      background-position: calc(50% + 295px/2) calc(50% + 39px/2);
-      .phone-image {
-       background-position: calc(50% + 0px/2) calc(50% + 645px/2);
-     }
+      background-position: calc(50% + 290px/2) calc(50% - 5px/2);
+    
      .intro-text {
+       background-position: calc(50% + 0px/2) calc(50% + 640px/2);
+      h1 {
+      padding: 3.5rem 0 1.5rem; 
+      }
         p {
        max-width: 436px;
-       margin: 0 auto 1.1875rem;
+       margin: 0 auto 1.5rem;
        }
     }
   
@@ -168,21 +167,18 @@ const Wrapper = styled.main`
    width: 77.153vw;
    background-size: 40rem;
    background-position: 100% 100%;
-   display: flex;
-     .phone-image {
-       background-position: calc(50% + 625px/2) calc(50% + 210px/2);
-     }
-     
+   display: flex; 
     .intro-text {
-      margin: 4rem 0 auto 5.938rem;
-      width: 100%;
+      background-position: calc(50% + 650px/2) calc(50% - 0px/2);
+      padding-left: 5.938rem;
+      
       h1 {
-        margin: 9 0 1.5rem;
+      padding: 9rem 0 1.5rem;
       }
       p {
-        margin: 0 0 2.5rem;
-       
-    }
+      margin-left: 0;
+      padding-bottom: 1.5rem;
+      }
     }
     
     .btn-dark {
