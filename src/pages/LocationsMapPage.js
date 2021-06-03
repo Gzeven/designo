@@ -1,8 +1,14 @@
+
 import React from 'react';
 import {useState} from 'react';
 import styled from 'styled-components';
 import ReactMapGl, {Marker}  from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
 import {MapMarker, ThreeCircles} from '../assets'
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN; 
 
@@ -36,7 +42,7 @@ const LocationsMapPage = () => {
     <Wrapper >
      <div className="section-center-one maps-container">
      
-     <div className="location">
+     <div className="location" id="canada">
        <div className="location-map">
            <ReactMapGl
            {...viewport}
@@ -74,7 +80,7 @@ const LocationsMapPage = () => {
       </div> 
      </div>
 
-       <div className="location">
+       <div className="location" id="australia">
           <div className="location-map">
             <ReactMapGl
             {...viewport2}
@@ -112,7 +118,7 @@ const LocationsMapPage = () => {
      
      </div>
       
-     <div className="location">
+     <div className="location" id="unitedkingdom">
          <div className="location-map">
                <ReactMapGl
                {...viewport3}

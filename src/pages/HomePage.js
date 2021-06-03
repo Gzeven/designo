@@ -11,6 +11,7 @@ const HomePage = () => {
         
         <Wrapper >
         <div className="intro section-center-one">
+        <div className="phone-image"></div>
          <div className="intro-text" >
          <h1>Award-winning custom<br></br> designs and digital<br></br> branding solutions</h1>
          <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
@@ -49,6 +50,7 @@ const Wrapper = styled.main`
 }
 
   .intro {
+      position: relative;
       background: url(${BackgroundHome}), var(--peach);
       text-align: center;
       background-repeat: no-repeat;
@@ -63,11 +65,19 @@ const Wrapper = styled.main`
       font-size: 0.975rem;
       line-height: 1.66;  
   } 
+
+  .phone-image {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       background-image: url(${Phone});
+       background-position: calc(50% + 0px/2) calc(50% + 680px/2);
+       background-repeat: no-repeat;
+       
+     }
   .intro-text {
     height: 48rem;
-    background-image: url(${Phone});
-    background-position: 50% -156%;
-    background-repeat: no-repeat;
+    z-index: 10;
       h1 {
       margin: 5rem 0 1.5rem; 
        }
@@ -104,12 +114,16 @@ const Wrapper = styled.main`
 @media (min-width: 768px) {
    .intro {
       background-position: calc(50% + 295px/2) calc(50% + 39px/2);
-    }
-    .intro-text {
-     p {
+      .phone-image {
+       background-position: calc(50% + 0px/2) calc(50% + 645px/2);
+     }
+     .intro-text {
+        p {
        max-width: 436px;
        margin: 0 auto 1.1875rem;
        }
+    }
+  
    }
    .links-container {
     height: 40.5rem;  
@@ -146,7 +160,6 @@ const Wrapper = styled.main`
     right: -165px;
     z-index: -1;
     transform: rotate(180deg);
-    /* opacity: 0.5;  */
   }
   
    .intro {
@@ -156,11 +169,11 @@ const Wrapper = styled.main`
    background-size: 40rem;
    background-position: 100% 100%;
    display: flex;
-
-   
+     .phone-image {
+       background-position: calc(50% + 625px/2) calc(50% + 210px/2);
+     }
+     
     .intro-text {
-      background-position: 530px -75px;
-      background-size: 600px;
       margin: 4rem 0 auto 5.938rem;
       width: 100%;
       h1 {

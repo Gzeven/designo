@@ -16,11 +16,13 @@
     "react-icons": "^4.2.0",
     "react-map-gl": "^6.1.15",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^1.1.5",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "2.1.8",
     "react-transition-group": "^4.4.2",
     "react-transition-group-v2": "^4.3.0",
     "styled-components": "^5.2.3",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,11 +36,17 @@
       "react-app/jest"
     ]
   },
-  
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^7.1.2"
-  }
+    "@babel/preset-react": "^7.13.13"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie 11",
+    " not chrome < 51",
+    "not safari < 10",
+    "not op_mini all"
+  ]
 }

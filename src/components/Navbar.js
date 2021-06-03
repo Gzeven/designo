@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { links } from '../utils/constants'
-import {LogoDark, Hamburger, Close} from '../assets';
+import {LogoDark } from '../assets';
 import styled from 'styled-components'
+import { Spin as Hamburger } from 'hamburger-react'
 
 
 
@@ -28,9 +29,13 @@ const Navbar = () => {
   <div className="nav-center">
   <div className="nav-header">
   <Link to="/"><img src={LogoDark} alt="Designo" className="logo" /></Link>
-  <button className='nav-toggle' onClick={()=>{setShowLinks(!showLinks)}}>
-  {showLinks ? <img src={Close} alt="close"/> : <img src={Hamburger} alt="open"/> } 
-  </button>
+  <Hamburger className='nav-toggle' size={24} color="#1D1C1E" label="Show menu" distance="sm" onToggle={toggled => {
+  if (toggled) { setShowLinks(true) 
+  } else {
+     setShowLinks(false)
+  }
+}}>
+  </Hamburger>
 
   </div>
   
@@ -63,21 +68,14 @@ const NavContainer = styled.nav`
   position: relative;
   z-index: 100;
   background: var(--white);
- 
   .logo {
   height: 27px;
-  
 }
-.nav-toggle {
-  font-size: 1.5rem;
-  background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
-  cursor: pointer;
+
+.hamburger-react {
+  margin-bottom: 0.5rem;
 }
-.nav-toggle:focus {
-  outline:none
-}
+
 }
 .links-container {
   height: 0;
@@ -132,9 +130,12 @@ const NavContainer = styled.nav`
     padding: 0;
    
   }
-   .nav-toggle {
-   display: none;
+ 
+  .hamburger-react {
+    display: none;
   }
+
+
    .links-container {
      position: relative;
      height: auto !important;

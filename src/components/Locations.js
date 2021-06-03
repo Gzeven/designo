@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import {SmallCircle, Australia, UnitedKingdom, Canada } from '../assets'
+import { HashLink } from 'react-router-hash-link';
 
 const Locations = () => {
   return <Wrapper>
@@ -14,7 +14,7 @@ const Locations = () => {
   <img src={SmallCircle} alt='background circle' className="background-image canada"/>
   </div>
     <h3>Canada</h3>
-   <Link to="/locations" className="btn-light">See Location</Link>
+   <HashLink to="/locations/#canada" className="btn-light">See Location</HashLink>
   </article>
 
    <article className="location">
@@ -23,7 +23,7 @@ const Locations = () => {
   <img src={SmallCircle} alt='background circle' className="background-image australia"/>
   </div>
     <h3>Australia</h3>
-   <Link to="/locations" className="btn-light">See Location</Link>
+   <HashLink to="/locations/#australia" className="btn-light">See Location</HashLink>
   </article>
 
    <article className="location">
@@ -32,7 +32,7 @@ const Locations = () => {
   <img src={SmallCircle} alt='background circle' className="background-image unitedkingdom"/>
   </div>
     <h3>United Kingdom</h3>
-   <Link to="/locations" className="btn-light">See Location</Link>
+   <HashLink to="/locations/#unitedkingdom" className="btn-light">See Location</HashLink>
   </article>
   
   </div>
