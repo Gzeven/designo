@@ -10,9 +10,10 @@ import { Spin as Hamburger } from 'hamburger-react'
 const Navbar = () => {
   
   const [showLinks, setShowLinks] = useState(false)
+  const [isOpen, setOpen] = useState(false)
   const linksContainterRef = useRef(null);
   const linksRef = useRef(null);
-
+  
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
     if(showLinks) {
@@ -23,13 +24,18 @@ const Navbar = () => {
     
   }, [showLinks])
 
+ const closeMenu = () => {
+   setOpen(false)
+   setShowLinks(false)
+ }
+
 
   return <NavContainer>
   
   <div className="nav-center">
   <div className="nav-header">
   <Link to="/"><img src={LogoDark} alt="Designo" className="logo" /></Link>
-  <Hamburger className='nav-toggle' size={24} color="#1D1C1E" label="Show menu" distance="sm" onToggle={toggled => {
+  <Hamburger className='nav-toggle' size={24} toggled={isOpen} toggle={setOpen} color="#1D1C1E" label="Show menu" distance="sm" onToggle={toggled => {
   if (toggled) { setShowLinks(true) 
   } else {
      setShowLinks(false)
@@ -44,7 +50,7 @@ const Navbar = () => {
   
   {links.map((link)=> {
     const {id, url, text} = link;
-    return <li key={id}><Link to={url}>{text}</Link></li>
+    return <li onClick={() => {closeMenu()}} key={id}><Link  to={url}>{text}</Link></li>
   })}
   
   
