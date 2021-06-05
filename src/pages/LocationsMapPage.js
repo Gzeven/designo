@@ -3,6 +3,7 @@ import React from 'react';
 import {useState} from 'react';
 import styled from 'styled-components';
 import ReactMapGl, {Marker}  from 'react-map-gl';
+import {ContactButton} from '../components'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 import {MapMarker, ThreeCircles} from '../assets'
@@ -159,21 +160,21 @@ const LocationsMapPage = () => {
      
      </div>
     
-
+    <ContactButton/>
     </Wrapper>
 
     );
 };
 
 const Wrapper = styled.main` 
-margin-bottom: 7.5rem;
+
 .location {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 7.5rem;
   .location-map {
     width: 100%;
     height: 20rem;
@@ -183,20 +184,21 @@ margin-bottom: 7.5rem;
     background: url(${ThreeCircles}), #FDF3F0;
     background-repeat: no-repeat;
     background-size: fill;
-    background-position: calc(50% + 200px/2) calc(50% + 195px/2);
-    padding: 5rem 0;
+    background-position: calc(50% + 210px/2) calc(50% + 195px/2);
     text-align: center;
     width: 100%;
-    height: 20rem;
+    padding: 5rem 0;
     
     h1 {
       color: var(--peach);
       margin-bottom: 1.5rem;
+      
     }
     p {
       color: var(--dark-grey);
       width: 327px;
       margin: 0 auto;
+      
     }
     .location-adress {
       margin-bottom: 1.5rem;
@@ -214,7 +216,6 @@ margin-bottom: 7.5rem;
       
     }
     .location-data {
-      padding: 10rem 5rem;
       border-radius: var(--radius); 
       padding: 5.5rem 4.5rem;
       background-position: calc(50% - 100px/2) calc(50% - 260px/2);
@@ -232,10 +233,14 @@ margin-bottom: 7.5rem;
   }
 }
 @media (min-width: 1281px) {
+  .maps-container {
+    margin-bottom: 7.5rem;
+  }
+
   .location {
     flex-direction: row-reverse;
     justify-content: space-between;
-   
+    margin-bottom: 2rem;
     .location-map {
     width: 30%;
     margin-bottom: 0;

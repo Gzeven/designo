@@ -98,7 +98,11 @@ const Wrapper = styled.section`
   }
   .service {
     text-align: center;
-  
+    height: 25.75rem;
+    p {
+      max-width: 305px;
+      margin: 0 auto;
+    }
   }
 
 @media (min-width: 768px) {
@@ -106,10 +110,17 @@ const Wrapper = styled.section`
     h3 {
       margin-bottom: 1rem;
     }
-
+   .services-center {
+     row-gap: 2rem;
+   }
     .service {
      display: flex;
-    align-items: center;
+     align-items: center;
+     height: 12.625rem;
+     p {
+       margin-left: 0;
+       max-width: 495px;
+     }
   
     }
     .image-container {
@@ -126,6 +137,7 @@ const Wrapper = styled.section`
     margin: 10rem 0;
     .service {
       flex-direction: column;
+      height: 25.75rem;
        
     }
     .image-container {
