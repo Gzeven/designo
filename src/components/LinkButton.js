@@ -15,7 +15,7 @@ const LinkButton = (props) => {
     );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
 position: relative;
 text-align: center;
 display: flex;

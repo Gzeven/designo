@@ -19,7 +19,7 @@ const ContactButton = () => {
     );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   width: 100%;
   background: linear-gradient(180deg, rgba(0,0,0,0) 50%, var(--black) 50%);
 
