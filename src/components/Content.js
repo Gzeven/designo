@@ -36,7 +36,7 @@ function Content () {
 
 
 
-const Wrapper = styled.main`
+const Wrapper = styled.section`
 .fade-enter {
     opacity: 0.01;
     &.fade-enter-active {
