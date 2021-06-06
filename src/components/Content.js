@@ -9,28 +9,28 @@ function Content () {
   
   return (
     <Wrapper>
-    <TransitionGroup>
-   <CSSTransition
+      <TransitionGroup>
+      <CSSTransition
           key={location.key}
           timeout={{ enter: 300, exit: 300 }}
           classNames={'fade'}    
-   >
-  <div>
-  <Switch location={location} >
-  <Route exact path="/" component={Home} />
-  <Route exact path="/about" component={About} />
-  <Route exact path="/webdesign" component={WebDesign} />
-  <Route exact path="/appdesign" component={AppDesign} />
-  <Route exact path="/graphicdesign" component={GraphicDesign} />
-  <Route exact path="/about" component={About}/> 
-  <Route exact path="/locations" component={LocationsMap}/> 
-  <Route exact path="/contact" component={Contact} />
-  <Route path="*" component={Error}/>
-  </Switch>
-  </div>
-  </CSSTransition>
-  </TransitionGroup>
-    </Wrapper>
+       >
+         <div>
+          <Switch location={location} >
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/webdesign" component={WebDesign} />
+            <Route exact path="/appdesign" component={AppDesign} />
+            <Route exact path="/graphicdesign" component={GraphicDesign} />
+            <Route exact path="/about" component={About}/> 
+            <Route exact path="/locations" component={LocationsMap}/> 
+            <Route exact path="/contact" component={Contact} />
+            <Route path="*" component={Error}/>
+           </Switch>
+         </div>
+     </CSSTransition>
+     </TransitionGroup>
+   </Wrapper>
   )
 }
 

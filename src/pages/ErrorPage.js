@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 const ErrorPage = () => {
   return <Wrapper >
-  <section >
-  <h1>404</h1>
-  <h3>Sorry, no designs to be found here</h3>
-  <Link to="/" className="btn-light">Back to Homepage</Link>
-  </section>
+   <section >
+     <h1>404</h1>
+     <h3>Sorry, no designs to be found here</h3>
+     <Link to="/" className="btn-light">Back to Homepage</Link>
+   </section>
   </Wrapper>
 };
 
@@ -23,18 +23,9 @@ const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   text-align: center;
-  h3 {
-    margin-bottom: 1.5rem;
-  }
-
-  @media (min-width: 768px) {
-    background-position: calc(50% - 0px/2) calc(50% - 0px/2);
-  }
-
-@media (min-width: 1281px) {
-   background-position: calc(50% - 0px/2) calc(50% - 0px/2);
-  }
-  
+    h3 {
+     margin-bottom: 1.5rem;
+    }
 `
 
 export default ErrorPage

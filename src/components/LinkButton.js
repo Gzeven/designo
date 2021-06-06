@@ -5,48 +5,45 @@ import {Arrow } from '../assets'
 
 const LinkButton = (props) => {
   return (
-        <Wrapper className={props.className}>
+      <Wrapper className={props.className}>
         <Link to={props.link} className="link-container ">
-        <h2>{props.header}</h2>
-        <p>View Projects <img src={Arrow} alt="arrow" /></p>
-        <div className="layer"></div> 
+          <h2>{props.header}</h2>
+          <p>View Projects <img src={Arrow} alt="arrow" /></p>
+          <div className="layer"></div> 
         </Link>
-        </Wrapper>
+      </Wrapper>
     );
 };
 
-const Wrapper = styled.main`
+const Wrapper = styled.section`
 position: relative;
 text-align: center;
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: var(--radius);
-
-h2 {
-      margin-bottom: 0.75rem;
-  }
-
-h2, p {
-    position: relative;
-    color: var(--white);
-    z-index: 10;
-    font-weight: 500;
-    text-transform: uppercase;
+ h2, p {
+  position: relative;
+  color: var(--white);
+  z-index: 10;
+  font-weight: 500;
+  text-transform: uppercase;
       :hover ~ .layer {
-    background: var(--peach);
-    opacity: 0.8 ;
-    
+       background: var(--peach);
+       opacity: 0.8 ;  
+      }
 }
 
-}
+h2  {
+  margin-bottom: 0.75rem;
+    }
 
 p {
     letter-spacing: 5px;
     font-size: 15px;
-    img {
+     img {
       margin-left: 0.5rem;
-    }
+       }
 }
 .layer {
     position: absolute;
@@ -58,18 +55,17 @@ p {
     border-radius: var(--radius);
     opacity: 0.5;
     transition: var(--transition);
-    :hover, :focus {
-    background-color: var(--peach);
-    opacity: 0.8;
-
-    }
+      :hover, :focus {
+       background-color: var(--peach);
+       opacity: 0.8;
+       }
 }
+
 @media (min-width: 768px) {
   h2 {
       margin-bottom: 1.5rem;
   }
-  }
-  
+} 
 `
 
 export default LinkButton;
