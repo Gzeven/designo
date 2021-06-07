@@ -32,7 +32,7 @@ const HomePage = () => {
     );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
 
 .leaf-one, .leaf-two {
   display: none;
